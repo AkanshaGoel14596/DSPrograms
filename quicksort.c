@@ -9,7 +9,6 @@ printf("Enter the values\n");
 for(i=0;i<n;i++)
 {
     scanf("%d",&a[i]);
-
 }
 for(i=0;i<n;i++)
 {
@@ -20,16 +19,12 @@ for(i=0;i<n;i++)
 }
 a[n]=max+1;
 quicksort(a ,0,n-1);
-
-
 printf("Sorted array");
 for(i=0;i<n;i++)
 {
     printf("\n%d",a[i]);
 }
 }
-
-
 void quicksort(int a[],int low,int high)
 {
      int j;
@@ -40,25 +35,20 @@ void quicksort(int a[],int low,int high)
         quicksort(a,j+1,high);
     }
 }
-
 int partition(int a[] ,int low ,int high)
 {
     int i,j,pivot ,temp;
     i=low;
     j=high+1;
-
     pivot= a[low];
     do{
     do{
     i++;
-
     }
     while(a[i]<pivot);
     do{
     j--;
-
     } while(a[j]>pivot);
-
     if(i<j)
     {
         temp=a[i];
@@ -70,10 +60,5 @@ int partition(int a[] ,int low ,int high)
     temp=a[j];
     a[j]=a[low];
     a[low]=temp;
-
      return j;
-
-
 }
-
-
